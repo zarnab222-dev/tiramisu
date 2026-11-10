@@ -6,6 +6,12 @@
       if (!this.shadowRoot) {
         this.attachShadow({mode:'open'}).innerHTML = '<style>'+CSS+'</style><a href="https://shin86.dev/" aria-label="web design by shin86 — visit shin86.dev" title="web design by shin86">'+SVG.replace('<svg ', '<svg aria-hidden="true" focusable="false" ')+'</a><button type="button" aria-label="pause signature motion" aria-pressed="false">Ⅱ</button>';
       }
+      if (window.location.hostname === 'lyrics.zarnab.dev') {
+        const credit = this.shadowRoot.querySelector('a');
+        credit.href = 'https://zarnab.dev/';
+        credit.setAttribute('aria-label', 'web design by Zarnab Haider — visit zarnab.dev');
+        credit.title = 'web design by Zarnab Haider';
+      }
       let inView = false;
       let paused = false;
       const preference = matchMedia('(prefers-reduced-motion: reduce)');

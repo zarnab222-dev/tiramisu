@@ -45,9 +45,10 @@ export interface AppProps {
 }
 
 function App({ provider = defaultProvider }: AppProps) {
+  const portfolioHost = window.location.hostname === 'lyrics.zarnab.dev' ? 'zarnab.dev' : 'shin86.dev'
   return (
     <ThemeProvider>
-      <nav className="cluster-nav" aria-label="cluster"><a className="cluster-return" href="https://shin86.dev/"><span aria-hidden="true">←</span> shin86.dev</a><a className="cluster-return community-link" href="https://discord.gg/d6Q4yJuMgP" target="_blank" rel="noopener noreferrer">Egghead Island ↗</a></nav>
+      <nav className="cluster-nav" aria-label="cluster"><a className="cluster-return" href={`https://${portfolioHost}/`}><span aria-hidden="true">←</span> {portfolioHost}</a><a className="cluster-return community-link" href="https://discord.gg/d6Q4yJuMgP" target="_blank" rel="noopener noreferrer">Egghead Island ↗</a></nav>
       <a className="skip-link" href="#main-content">skip to content</a>
       <AppRoutes provider={provider} />
     </ThemeProvider>

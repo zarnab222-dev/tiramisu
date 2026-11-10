@@ -6,7 +6,7 @@ Search and lyric presentation are separate layers. The browser searches LRCLIB f
 
 The three default searches are This Modern Love by Bloc Party, Melancholy by Driveways, and cbd by brakence. The featured This Modern Love entry uses a verified LRCLIB record. An old saved LrcMux link that returns 404 can recover through an exact title-and-artist LRCLIB match.
 
-**[Open tiramisu](https://tiramisu.shin86.dev)**
+**[Open tiramisu](https://lyrics.zarnab.dev)**
 
 This is a lyric reader, not a music player or synchronized karaoke display. Community-provider lookup can fail for individual tracks.
 
@@ -33,7 +33,7 @@ npm run build
 
 ## Structure
 
-Keep the shared `← shin86.dev` link outside the route switch. Direct lyric links, loading states, and errors must retain the same route to the cluster. Use the existing geometric palette for clear hover, keyboard focus, pressed, and selected control states.
+Keep the shared portfolio return link outside the route switch: `← zarnab.dev` on `lyrics.zarnab.dev`, and `← shin86.dev` on the existing art hosts. Direct lyric links, loading states, and errors must retain the same route to the cluster. Use the existing geometric palette for clear hover, keyboard focus, pressed, and selected control states.
 
 - `src/domain/` defines normalized lyric and provider interfaces.
 - `src/lookup/` owns fixture, LRCLIB, LrcMux, and aggregate provider adapters.
